@@ -23,18 +23,6 @@ The GitHub Actions workflow (`.github/workflows/owasp-zap.yml`) automates the se
 The OWASP ZAP scanning workflow is defined as follows:
 
 ```yaml
-name: owasp zap integration with github actions
-on: [push]
-
-jobs:
-  zap_scan:
-    runs-on: ubuntu-latest
-    name: Scan the webapplication
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: main
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.12.0
         with:
