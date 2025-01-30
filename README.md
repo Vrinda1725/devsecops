@@ -32,7 +32,7 @@ The OWASP ZAP scanning workflow is defined as follows:
           cmd_options: '-a'
 ```
 
-### Key Components
+### Inputs
 - **Trigger:** Runs automatically on each `push` event.
 - **ZAP Scan Action:** Uses [`zaproxy/action-full-scan`](https://github.com/zaproxy/action-full-scan) to scan the target.
 - **Target URL:** The web application to be scanned (currently `http://testphp.vulnweb.com/`).
@@ -44,7 +44,7 @@ The OWASP ZAP scanning workflow is defined as follows:
 1. **Spidering & Crawling:**
    - ZAP first **crawls** the target website to discover pages and input fields.
 2. **Active Scanning:**
-   - Sends **malicious payloads** to form fields, URLs, and headers to detect vulnerabilities.
+   - Sends **active payloads** to form fields, URLs, and headers to detect vulnerabilities.
 3. **Passive Scanning:**
    - Analyzes HTTP responses for security weaknesses **without sending active attacks**.
 4. **Reporting & Alerts:**
@@ -54,17 +54,9 @@ The OWASP ZAP scanning workflow is defined as follows:
 After the workflow completes, the scan results can be accessed via:
 
 - **GitHub Actions Logs:**
-  - Navigate to **GitHub Repository → Actions → owasp zap integration with github actions → zap_scan**
-- **ZAP Reports (if configured):**
-  - Reports can be saved to an artifact or external logging system for detailed analysis.
+  - Navigate to **GitHub Repository → Actions
 
-## Customizing the Scan
-You can modify the scan by changing:
-- **Target URL:** Set it to your own web application.
-- **Rules File (`.zap/rules.tsv`):** Customize or suppress specific alerts.
-- **Command Options:** Add ZAP CLI options to fine-tune scanning behavior.
-
-## Conclusion
+## Summary
 Integrating OWASP ZAP into GitHub Actions enhances **security automation** by identifying vulnerabilities early in the development cycle. By regularly scanning your web application, you can mitigate risks and improve security posture before deployment.
 
 For more details, refer to the [OWASP ZAP Documentation](https://www.zaproxy.org/docs/).
