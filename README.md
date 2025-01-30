@@ -53,8 +53,7 @@ The OWASP ZAP scanning workflow is defined as follows:
 ## How to View the Results
 After the workflow completes, the scan results can be accessed via:
 
-- **GitHub Actions Logs:**
-  - Navigate to **GitHub Repository → Actions
+- **GitHub Actions Logs**
 
 ## Summary
 Integrating OWASP ZAP into GitHub Actions enhances **security automation** by identifying vulnerabilities early in the development cycle. By regularly scanning your web application, you can mitigate risks and improve security posture before deployment.
